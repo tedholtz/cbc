@@ -1,4 +1,4 @@
-cbc
+cbq
 ===
 
-Code Base Comment Generator
+Code Base API Query Tool

@@ -1,8 +1,7 @@
-package com.breathingsoftware;
+package com.breathingsoftware.codebase;
 
 import java.io.IOException;
 
-import com.typesafe.config.ConfigFactory;
 import org.jsoup.Connection.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -10,7 +9,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class Message {
-    public static void main(String[] args) {
+    public static void run(String[] args) {
         if (args.length < 2) return;
 
         String ticket = args[1];
@@ -20,7 +19,7 @@ public class Message {
      
             Response ticket_xml = Jsoup
                 .connect(Query.URL + "/opentempo-java/tickets/" + ticket)
-                .header("Authorization", "Basic " + Query.base64login)
+                .header("Authorization", "Basic " + Query.base64login())
                 .header("Accept", "application/xml")
                 .header("Content-type", "application/xml")
                 .execute();
