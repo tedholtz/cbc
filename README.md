@@ -21,6 +21,7 @@ username in the codebase settings->My Profile page.
     ~~~
 
 ## run
+1. See the things you haven't yet tagged
     ~~~ sh
     $ cbq previews
     ~~~
