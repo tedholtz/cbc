@@ -7,21 +7,18 @@ username in the codebase settings->My Profile page.
 
 2. Build
     ~~~ sh
-    $ ./gradlew installdist
+    ./gradlew installdist
     ~~~
 
 3. Put the main script in your path
     ~~~ sh
-    $ cp build/install/cbq/bin/cbq ~/bin/
+    cp build/install/cbq/bin/cbq ~/bin/
     ~~~
 
 4. Put the libs where the main script wants to find them. By default, it expects to see a lib folder in your home.
     ~~~ sh
-    $ cp build/install/cbq/lib/* ~/lib/
+    cp build/install/cbq/lib/* ~/lib/
     ~~~
 
 ## run
-1. See the things you haven't yet tagged
-    ~~~ sh
-    $ cbq previews
-    ~~~
+    cbq previews
