@@ -10,6 +10,7 @@ public class Query {
     public static String URL = "https://api3.codebasehq.com";
     public static String username;
     public static String key;
+    public static String previewTag;
 
     public static void main(String[] args) {
 
@@ -41,5 +42,6 @@ public class Query {
         Config conf = ConfigFactory.load();
         username = conf.getString("codebase_api_username");
         key = conf.getString("codebase_api_key");
+        previewTag = conf.getString("codebase_preview_tag");
     }
 }

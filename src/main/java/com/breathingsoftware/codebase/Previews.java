@@ -13,8 +13,6 @@ public class Previews {
 
         Document doc;
     	try {
-            System.out.println("URL: " + Query.URL);
-            System.out.println("base64login: " + Query.base64login());
      
             Response ticket_xml = Jsoup
                 .connect(Query.URL + "/opentempo-java/tickets?query=resolution:open")
@@ -34,7 +32,7 @@ public class Previews {
 
                 if (x.contains("<summary>")) summary = parseValue(x);
 
-                if (x.contains("<tags>") && ! x.contains("tedpreviewed")) {
+                if (x.contains("<tags>") && ! x.contains(Query.previewTag)) {
                     System.out.printf("%s: %s\n", id, summary);
                     System.out.println(" - https://6degrees.codebasehq.com/projects/opentempo-java/tickets/" + id);
                 }
